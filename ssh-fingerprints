@@ -115,7 +115,7 @@ do
         fi
 
         printf " | %-7s | %-52s |\n" "$cipher" "MD5:${ALGOS[md5]}"
-        printf " | %-7s | %-52s |\n" "$cipher" "SHA-256:${ALGOS[sha256]}"
+        printf " | %-7s | %-52s |\n" "$cipher" "SHA256:${ALGOS[sha256]}"
         echo "$LINE"
     fi
 done < <(echo "$hostkey_files")
