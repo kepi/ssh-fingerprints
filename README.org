@@ -1,0 +1,57 @@
+#+title: SSH Fingerpints
+
+Small script to display all used SSH fingerprints for easier verification.
+
+#+begin_example
+❯ ssh-fingerprints
+ +---------+------------------------------------------------------+
+ | Cipher  | Algo and Fingerprint                                 |
+ +---------+------------------------------------------------------+
+ | RSA     | MD5:65:cc:63:49:ac:d6:a6:a8:5c:ab:58:12:f6:84:a4:75  |
+ | RSA     | SHA-256:jlDPKCCRr1TkufVsZJf02ejXNQ7RB/vg09uGwKeSwnU  |
+ +---------+------------------------------------------------------+
+ | ECDSA   | MD5:fc:fa:b1:4a:6a:4f:4e:15:24:a0:28:14:d8:13:f2:58  |
+ | ECDSA   | SHA-256:XqtbaJcdqem6s/R+T9NpXA7QKCTyPfzxC3f+2O/vfmY  |
+ +---------+------------------------------------------------------+
+ | ED25519 | MD5:03:1e:8e:0e:a8:4a:08:7a:49:35:af:2f:99:b8:9c:5b  |
+ | ED25519 | SHA-256:HV5r6SFytqauiUrWcXd3zDGMzCYHj6RR6tKj0S0UhFI  |
+ +---------+------------------------------------------------------+
+
+ +---[RSA 3072]----+ +---[RSA 3072]----+ +---[ECDSA 256]---+ +---[ECDSA 256]---+ +--[ED25519 256]--+ +--[ED25519 256]--+
+ |         ..      | |....     .   .o. | |o+E.  ... .      | |      . . .      | |                 | |     .Eo+.+      |
+ |         +..     | |.....   . o + .o.| |o=o. .   o       | |       o =   o   | |                 | |    . .  * * o   |
+ |  o E    oO      | |..oo ..o o + oo.o| |o o..     .      | |        . = + .  | |    o o          | |     .  + + O +  |
+ | + o    o+o.     | | o..o.=+. .. .++o| | .     .   .     | |           + =   | | . . * o         | |       = + * = o |
+ |. + .  oSo       | |.. .o .+S ..E.+oo| |        S .      | |        S . = + o| |o o . + S        | |    . + S O * +  |
+ | . +  o .        | |.    o.+ . o.+ oo| |         o       | |       . o * +.Bo| |=. + .   .       | |   . o = B * o   |
+ |  ..oo .         | |      . + o . ..o| |        + o      | |        = B . +++| |+.o.Eo           | |  o . .   o .    |
+ |   +o .          | |         . .   . | |      .* . o     | |       o.*  ...+E| |oo.o+.           | | o   . . o       |
+ |  . ..           | |                 | |     ...=oo      | |        *B+. .o*%| |. =o ..          | |  ... ooo        |
+ +------[MD5]------+ +----[SHA256]-----+ +------[MD5]------+ +----[SHA256]-----+ +------[MD5]------+ +----[SHA256]-----+
+#+end_example
+
+* Install
+Simply download the =ssh-fingerprints= script and put it somewhere into your =PATH=
+
+* What are those pretty ASCII pictures?
+Those are visual representations of SSH fingerprints. If you don't have recent
+*ssh client*, which allows you to Copy&Paste *Algo and Fingerprint* line, you
+can use them for easier verification by eye.
+
+With even small change in fingerprint, resulting ASCII art is totally different
+so it is easier to verify valid key with quick glance.
+
+* Motivation
+I believe that you should never SSH into any server without verifying its
+fingerprint first.
+
+It would be kind of easy to use default =ssh-keygen= command if not for the
+fact, that there are multiple ciphers and algorithms in play.
+
+As part of my job is preparing new server for users, I was searching for easier
+way. And found only [[https://superuser.com/q/929566/221994][this question on superuser]], which finally motivated me to
+wrote this IMHO missing piece. With it, you can get all needed info for users
+with one command.
+
+* License
+MIT
