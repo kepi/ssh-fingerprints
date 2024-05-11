@@ -4,18 +4,18 @@ Small script to display all used SSH fingerprints for easier verification.
 
 #+begin_example
 ❯ ssh-fingerprints
- +---------+------------------------------------------------------+
- | Cipher  | Algo and Fingerprint                                 |
- +---------+------------------------------------------------------+
- | RSA     | MD5:65:cc:63:49:ac:d6:a6:a8:5c:ab:58:12:f6:84:a4:75  |
- | RSA     | SHA-256:jlDPKCCRr1TkufVsZJf02ejXNQ7RB/vg09uGwKeSwnU  |
- +---------+------------------------------------------------------+
- | ECDSA   | MD5:fc:fa:b1:4a:6a:4f:4e:15:24:a0:28:14:d8:13:f2:58  |
- | ECDSA   | SHA-256:XqtbaJcdqem6s/R+T9NpXA7QKCTyPfzxC3f+2O/vfmY  |
- +---------+------------------------------------------------------+
- | ED25519 | MD5:03:1e:8e:0e:a8:4a:08:7a:49:35:af:2f:99:b8:9c:5b  |
- | ED25519 | SHA-256:HV5r6SFytqauiUrWcXd3zDGMzCYHj6RR6tKj0S0UhFI  |
- +---------+------------------------------------------------------+
+ +---------+-----------------------------------------------------+
+ | Cipher  | Algo and Fingerprint                                |
+ +---------+-----------------------------------------------------+
+ | RSA     | MD5:65:cc:63:49:ac:d6:a6:a8:5c:ab:58:12:f6:84:a4:75 |
+ | RSA     | SHA256:jlDPKCCRr1TkufVsZJf02ejXNQ7RB/vg09uGwKeSwnU  |
+ +---------+-----------------------------------------------------+
+ | ECDSA   | MD5:fc:fa:b1:4a:6a:4f:4e:15:24:a0:28:14:d8:13:f2:58 |
+ | ECDSA   | SHA256:XqtbaJcdqem6s/R+T9NpXA7QKCTyPfzxC3f+2O/vfmY  |
+ +---------+-----------------------------------------------------+
+ | ED25519 | MD5:03:1e:8e:0e:a8:4a:08:7a:49:35:af:2f:99:b8:9c:5b |
+ | ED25519 | SHA256:HV5r6SFytqauiUrWcXd3zDGMzCYHj6RR6tKj0S0UhFI  |
+ +---------+-----------------------------------------------------+
 
  +---[RSA 3072]----+ +---[RSA 3072]----+ +---[ECDSA 256]---+ +---[ECDSA 256]---+ +--[ED25519 256]--+ +--[ED25519 256]--+
  |         ..      | |....     .   .o. | |o+E.  ... .      | |      . . .      | |                 | |     .Eo+.+      |
