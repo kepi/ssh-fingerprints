@@ -31,7 +31,12 @@ Small script to display all used SSH fingerprints for easier verification.
 #+end_example
 
 * Install
-Simply download the =ssh-fingerprints= script and put it somewhere into your =PATH=
+Simply download the =ssh-fingerprints= script and put it somewhere into your =PATH=.
+
+This script has also been packaged by [[https://github.com/cyqsimon][@cyqsimon]]
+for Fedora & RHEL on [[https://copr.fedorainfracloud.org/coprs/cyqsimon/ssh-fingerprints/][COPR]]
+and for ArchLinux on [[https://aur.archlinux.org/packages/ssh-fingerprints][AUR]],
+for your convenience.
 
 * What are those pretty ASCII pictures?
 Those are visual representations of SSH fingerprints. If you don't have recent
